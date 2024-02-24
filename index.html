@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="out.css">
+  <title>Tailwind CSS</title>
+  <style>
+    body {
+      zoom: 140%;
+    }
+
+    
+  </style>
+</head>
+<body class="font-sans text-gray-300 bg-gray-800">
+  <header class="bg-gray-900 text-white py-4 px-6">
+      <div class="container mx-auto flex justify-between items-center">
+          <h1 class="text-2xl font-semibold">AlbanianServer</h1>
+          <nav class="hidden md:block">
+              <a href="#" class="text-white hover:text-gray-200 px-4">Home</a>
+              <a href="#" class="text-white hover:text-gray-200 px-4">Services</a>
+              <a href="contact.html" class="text-white hover:text-gray-200 px-4">Contact</a>
+          </nav>
+          <div class="md:hidden">
+              <button id="menu-toggle" class="focus:outline-none">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                  </svg>
+              </button>
+          </div>
+      </div>
+  </header>
+  
+
+  <div id="mobile-menu" class="md:hidden hidden bg-gray-900 text-white py-2 px-6">
+      <a href="#" class="block text-white hover:text-gray-200 py-2">Home</a>
+      <a href="#" class="block text-white hover:text-gray-200 py-2">Services</a>
+      <a href="#" class="block text-white hover:text-gray-200 py-2">Contact</a>
+  </div>
+
+  <section class="py-16 px-6 text-center">
+      <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl font-semibold mb-4">Host your <span id="rotating-text"></span></h2>
+          <script>
+              const rotatingText = document.getElementById('rotating-text');
+            const serverTypes = ["python server", "nodeJS server", "lavalink server", "games server", "discord bot", "voice server"];
+              let count = 0;
+              let index = 0;
+              let currentText = '';
+              let letter = '';
+
+              (function type() {
+                  currentText = serverTypes[count];
+                  letter = currentText.slice(0, ++index);
+
+                  rotatingText.textContent = letter;
+                  if (letter.length === currentText.length) {
+                      count = (count + 1) % serverTypes.length;
+                      index = 0;
+                      setTimeout(type, 1000); // Change the timeout according to your preference
+                  } else {
+                      setTimeout(type, 100); // Change the timeout according to your preference
+                  }
+              })();
+          </script>
+          <p class="text-lg text-gray-300 leading-relaxed mb-8">Experience top-notch hosting services tailored to your needs. From shared hosting to dedicated servers, AlbanianServer provides reliable solutions at affordable prices.</p>
+          <a href="#" class="bg-gray-900 text-white py-2 px-6 rounded-full inline-block hover:bg-gray-700 transition duration-300">Sign Up Now</a>
+      </div>
+  </section>
+
+
+    
+  </section>
+
+  <section style="margin: -10px 0; overflow-x: hidden;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#4A5568" fill-opacity="1" d="M0,192L60,197.3C120,203,240,213,360,192C480,171,600,117,720,106.7C840,96,960,128,1080,133.3C1200,139,1320,117,1380,106.7L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+    </svg>
+  </section>
+  
+  <section style="margin: -10px 0; overflow-x: hidden; background-color: #4A5568;" class="py-16 px-6 bg-gray-900 relative">
+      <div class="max-w-5xl mx-auto text-center relative z-10">
+          <h2 class="text-3xl font-semibold mb-8">What do our customers have to say?</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+              <div class="bg-gray-800 rounded-lg shadow-md p-6">
+                  <div class="max-w-5xl mx-auto text-center relative z-10">
+                      <img src="https://media.discordapp.net/attachments/1208104540012941383/1210733159608619048/5stars.png?ex=65eba21f&is=65d92d1f&hm=128d2cde11e652d298da34489c12daf2bee3301737334279229695e444409c6d&=&format=webp&quality=lossless&width=1021&height=308">
+                      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                              <div class="text-center", style="text-alight: center">
+                              <h3 class="text-xl font-semibold mb-4 text-center", style="text-alight: center">Emerald</h3>
+                          </div>
+                      </div>
+                  </div>
+                <p>Lorem Ipsum amet dolor sit amet, consectetur adipiscing elit. Nullam euismod, erat eget malesuada mattis.</p>
+              </div>
+              <div class="bg-gray-800 rounded-lg shadow-md p-6">
+                  <h3 class="text-xl font-semibold mb-4">RAM</h3>
+                  <p class="text-gray-300">16 GB DDR4</p>
+              </div>
+              <div class="bg-gray-800 rounded-lg shadow-md p-6">
+                  <h3 class="text-xl font-semibold mb-4">Storage</h3>
+                  <p class="text-gray-300">1 TB SSD</p>
+              </div>
+              <div class="bg-gray-800 rounded-lg shadow-md p-6">
+                  <h3 class="text-xl font-semibold mb-4">Bandwidth</h3>
+                  <p class="text-gray-300">Unlimited</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+
+      <section style="margin: -10px 0; overflow-x: hidden;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+              <path fill="#4A5568" fill-opacity="1" d="M0,128L60,122.7C120,117,240,107,360,128C480,149,600,179,720,189.3C840,199,960,177,1080,171.7C1200,166,1320,177,1380,189.3L1440,199L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+          </svg>
+      </section>
+
+  <section class="py-16 px-6 bg-gray-800 relative">
+      <div class="max-w-5xl mx-auto text-center relative z-10">
+          <h2 class="text-3xl font-semibold text-white mb-8">Plans</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div class=" rounded-lg shadow-md p-6", style="background-color: #4A5568">
+                  <h3 class="text-xl font-semibold text-white mb-4">Basic</h3>
+                  <p class="text-gray-300 mb-4">Price: $2/month</p>
+                  <ul class="text-left">
+                      <li class="text-gray-300"></li>
+                      <li class="text-gray-300">CPU: 125%</li>
+                      <img src="3_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+                      <li class="text-gray-300">RAM: 2GB</li>
+                      <img src="3_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+                      <li class="text-gray-300">Storage: 4 GB</li>
+                      <img src="2_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+                      <li class="text-gray-300">Bandwidth: Unlimited</li>
+                      <img src="5_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+
+                      <li class="text-gray-300">Backups: 3</li>
+                      <img src="3_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+                      <li class="text-gray-300">Support: 24/7</li>
+                      <img src="5_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+
+                  </ul>
+              </div>
+            <div class=" rounded-lg shadow-md p-6", style="background-color: #4A5568">
+                  <h3 class="text-xl font-semibold text-white mb-4">Standard</h3>
+                  <p class="text-gray-300 mb-4">Price: $4/month</p>
+                  <ul class="text-left">
+                      <li class="text-gray-300">CPU: 150%</li>
+                      <img src="4_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+
+                      <li class="text-gray-300">RAM: 4GB</li>
+                      <img src="4_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+
+                      <li class="text-gray-300">Storage: 6GB</li>
+                    <img src="3_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+
+                      <li class="text-gray-300">Bandwidth: Unlimited</li>
+                    <img src="5_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+
+                      <li class="text-gray-300">Backups: 5</li>
+                    <img src="4_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+
+                      <li class=text-gray-300">Support: 24/7</li>
+                    <img src="5_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+
+                  </ul>
+              </div>
+              <div class=" rounded-lg shadow-md p-6", style="background-color: #4A5568">
+                  <h3 class="text-xl font-semibold text-white mb-4">Premium</h3>
+                  <p class="text-gray-300 mb-4">Price: $5/month</p>
+                  <ul class="text-left">
+                      <li class="text-gray-300">CPU: 200%</li>
+                    <img src="5_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+
+                      <li class="text-gray-300">RAM: 5GB</li>
+                    <img src="5_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+
+                      <li class="text-gray-300">Storage: 8GB</li>
+                    <img src="5_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+
+                      <li class="text-gray-300">Bandwidth: Unlimited</li>
+                    <img src="5_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+
+                      <li class="text-gray-300">Backups: 10</li>
+                    <img src="5_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+
+                      <li class="text-gray-300">Support: 24/7</li>
+                    <img src="5_stars-removebg-preview.png" alt="1 star", style="width: 50%;">
+
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section style="margin: -10px 0; overflow-x: hidden;">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#4A5568" fill-opacity="1" d="M0,192L60,197.3C120,203,240,213,360,192C480,171,600,117,720,106.7C840,96,960,128,1080,133.3C1200,139,1320,117,1380,106.7L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+    </svg>
+  </section>
+
+
+  <section class="py-16 px-6 text-center", style="background-color: #4A5568;">
+      <div class="max-w-3xl mx-auto">
+          <h2 class="text-3xl font-semibold mb-4">Ready to Get Started?</h2>
+          <p class="text-lg text-gray-300 leading-relaxed mb-8">Join AlbanianServer today and experience lightning-fast hosting with 24/7 support.</p>
+          <a href="#" class="bg-gray-900 text-white py-2 px-6 rounded-full inline-block hover:bg-gray-700 transition duration-300">Sign Up Now</a>
+      </div>
+  </section>
+
+  <section style="margin: -10px 0; overflow-x: hidden;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#4A5568" fill-opacity="1" d="M0,128L60,122.7C120,117,240,107,360,128C480,149,600,179,720,189.3C840,199,960,177,1080,171.7C1200,166,1320,177,1380,189.3L1440,199L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+      </svg>
+  </section>
+
+  <section class="py-6 px-6 text-center">
+    <p class="text-gray-300">Created with ♥ by 3mer4ld, <a href="https://discord.gg/rblxgen" class="text-blue-600 hover:underline">Join Emerald's Server</a>.</p>
+  </section>
+
+  <script>
+      document.getElementById('menu-toggle').addEventListener('click', function() {
+          document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
+  </script>
+</body>
+</html>
